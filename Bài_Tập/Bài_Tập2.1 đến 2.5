@@ -76,7 +76,7 @@ Bài_2.5:Chương trình đang có một vài lỗi sinh viên cần tìm, sửa
         Mô tả giá trị đầu ra
         - Tổng a b c
         - Trung bình cộng a b c
-#include<stdio.h>
+Cách 1: #include<stdio.h>
 int main(){
     int a,b,c;
 	int tong;
@@ -86,4 +86,18 @@ int main(){
     tong=a+b+c;
     printf("%d\n",tong);
     printf("%f",tong/3.0);
+}
+Cách 2: #include<stdio.h>
+int main(){
+    float a,b,c;
+    printf("\n nhap 3 so a, b,c: ");
+	scanf("%f %f %f",&a,&b,&c);
+	float maxValue =a;
+	if(b>maxValue){
+		maxValue =b;
+	}
+  	if(c>maxValue){
+  		maxValue = c;
+	  }
+	  printf("so lon nhat :%f", maxValue);
 }
