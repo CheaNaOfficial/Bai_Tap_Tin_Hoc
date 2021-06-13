@@ -8,17 +8,17 @@
           Mô tả giá trị đầu ra:
           Tổng điểm
           Trung Bình
-                                  #include<stdio.h>
-                                  #include<math.h> 
-                                  int main()
-                                  {
-                                      float a,b,c,tong;
-                                      scanf("%f%f%f",&a,&b,&c); 
-                                      tong = a+b+c;
-                                      printf("%f\n",tong);
-                                      printf("%f",tong/3);	
+	  
+#include<stdio.h>
+#include<math.h> 
+int main(){
+   float a,b,c,tong;
+   scanf("%f%f%f",&a,&b,&c); 
+   tong = a+b+c;
+   printf("%f\n",tong);
+   printf("%f",tong/3);	
 
-                                  }
+  }
 
 Bài_3.2:    Lập chương trình thực hiện các công việc sau:
 1.Nhập số thực r (r >0) bất kì 
@@ -55,16 +55,17 @@ Bài_3.3:    Lập chương trình thực hiện các công việc sau:
             - Kết quả A
             - Kết quả B
             - Kết quả C
-                          #include<stdio.h>
-                          int main(){
-                              float x,y,a,b,c;
-                              scanf("%f",&x);
-                              scanf("%f",&y);
-                              printf("%f\n",a=x*x+y*y);
-                              printf("%f\n",b=(x+y)*(x+y));
-                              printf("%f\n",c=(x-y)*(x-y));
-                              return 0;
-                          }
+	    
+#include<stdio.h>
+int main(){
+  float x,y,a,b,c;
+  scanf("%f",&x);
+  scanf("%f",&y);
+  printf("%f\n",a=x*x+y*y);
+  printf("%f\n",b=(x+y)*(x+y));
+  printf("%f\n",c=(x-y)*(x-y));
+  return 0;
+  }
 
 Bài_3.4:    Viết chương trình yêu cầu người dùng nhập giá chưa có thuế của một kg cà chua, số kg bạn muốn mua và thuế theo đơn vị phần trăm. Chương trình phải tính tổng giá đã             bao gồm thuế.
           + Mô tả giá trị đầu vào: 
@@ -73,13 +74,14 @@ Bài_3.4:    Viết chương trình yêu cầu người dùng nhập giá chưa 
             - Thuế
           + Mô tả giá trị đầu ra:
             -Tổng giá trị sau thuế
-            #include<stdio.h>
-            #include<math.h>
-            int main(){
-	          float s,m,n,tong;
-	          scanf("%f %f %f",&s,&m,&n);
-	          tong = s*m+(s*m*n)/100;
-	          printf("%f",tong);
+	    
+#include<stdio.h>
+#include<math.h>
+int main(){
+	float s,m,n,tong;
+	scanf("%f %f %f",&s,&m,&n);
+	tong = s*m+(s*m*n)/100;
+	printf("%f",tong);
             }
             
 Bài_3.5:    Lập chương trình thực hiện các công việc sau:
@@ -92,17 +94,17 @@ Bài_3.5:    Lập chương trình thực hiện các công việc sau:
             - Số thực z
           + Mô tả giá trị đầu ra
             - Kết quả F
-                                #include<stdio.h>
-                                #include<math.h> 
-                                int main()
-                                {
-                                    double x,y,z,s;  
-                                    scanf ("%lf%lf%lf",&x,&y,&z);
-                                    double F;
-                                    F=((x+y+z)/(pow(x,2)+pow(y,2)+1.0)-fabs(x-z*cos(y)));
-                                    printf("%f",F);
-                                    return 0;
-                                }
+                               
+#include<stdio.h>
+#include<math.h> 
+int main(){
+     double x,y,z,s;  
+     scanf ("%lf%lf%lf",&x,&y,&z);
+     double F;
+     F=((x+y+z)/(pow(x,2)+pow(y,2)+1.0)-fabs(x-z*cos(y)));
+     printf("%f",F);
+     return 0;
+     }
 
 Bài_3.6:    Lập chương trình thực hiện các công việc sau:
           1.	Nhập 2 số thực X, Y
@@ -114,17 +116,17 @@ Bài_3.6:    Lập chương trình thực hiện các công việc sau:
           + Mô tả giá trị đầu ra:
             - Kết quả F
           
-                                    #include<stdio.h>
-                                    #include<math.h>
-                                    int main(){
-                                      float x,y,f=0;
-                                      int i;
-                                      scanf("%f",&x);
-                                      scanf("%f",&y);
+#include<stdio.h>
+#include<math.h>
+int main(){
+    float x,y,f=0;
+    int i;
+    scanf("%f",&x);
+    scanf("%f",&y);
 
-                                      for(i=0;i<=6;i++)
-                                      f+=pow(x,i)*pow(y,6-i);
-                                      printf("%f",f);
-                                      return 0;
+    for(i=0;i<=6;i++)
+    f+=pow(x,i)*pow(y,6-i);
+    printf("%f",f);
+    return 0;
 
-                                    }
+    }
