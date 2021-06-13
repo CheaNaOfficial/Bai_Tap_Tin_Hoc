@@ -21,25 +21,27 @@
                                   }
 
 Bài_3.2:    Lập chương trình thực hiện các công việc sau:
-          1.	Nhập số thực r (r >0) bất kì 
-          2.	Tính chu vi M, diện tích S của hình tròn.
-          Giá trị PI = 3.14159
-          Chú ý: Nếu giá trị đầu vào không thỏa mãn điều kiện, chương trình in ra màn hình chữ ERROR và kết thúc. 
-          Mô tả giá trị đầu vào: 
-          Số thực r
-          Mô tả giá trị đầu ra:
-          Chu vi M
-          Diện tich S
-                            #include<stdio.h>
-                            #define PI 3.14159
-                            int main(){
-                              float M,S,R; 
-                              scanf("%f",&R);
-                              M=2*PI*R;
-                              S=PI*R*R;
-                              printf("%f\n",M);
-                              printf("%f",S);
-                            }
+1.Nhập số thực r (r >0) bất kì 
+2.Tính chu vi M, diện tích S của hình tròn.
+   Giá trị PI = 3.14159
+   Chú ý: Nếu giá trị đầu vào không thỏa mãn điều kiện, chương trình in ra màn hình chữ ERROR và kết thúc. 
+   Mô tả giá trị đầu vào: 
+   Số thực r
+   Mô tả giá trị đầu ra:
+   Chu vi M
+   Diện tich S
+	  
+#include<stdio.h>
+int main(){
+	float a; 
+scanf("%f",&a) ;
+if(a>0){
+printf("%f\n%f",2*a*3.14159,a*a*3.14159) ;}
+else{printf("ERROR"); 
+}
+return 0;
+}
+
 Bài_3.3:    Lập chương trình thực hiện các công việc sau:
           1. Nhập 2 số thực X, Y
           2.Tính các giá trị biểu thức sau
