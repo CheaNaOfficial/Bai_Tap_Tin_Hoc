@@ -15,6 +15,30 @@ Output:
 5 4 3 2 1
 15
 
+#include<stdio.h>
+int main() {
+	int a1[100],a2[100];
+	int n;
+	scanf("%d", &n);
+   if(n>0){	
+	for (int i = 0; i < n; i++) {
+			scanf("%d", &a1[i]);
+		}
+    for(int j=0; j < n; j++){
+        a2[j]=a1[n-j-1];   
+    }
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+	    printf("%d ",a2[i]);
+			sum += a1[i];
+		}   
+	printf("\n%d", sum);}
+	else{printf("Error");}
+
+	return 0;
+}
+
+
 5.2: Nhập mảng số nguyên từ bàn phím. Tính trung bình cộng các số âm, tổng các số dương và đưa kết quả ra màn hình.
 Mô tả giá trị đầu vào:
 - Dòng đầu tiên cho biết số phần tử mảng 𝑛.
@@ -30,6 +54,33 @@ Input
 Output
 -15.000000 Mang khong co so duong
 
+#include<stdio.h>
+int main() {
+    int n;
+    scanf("%d",&n);
+  int a[n];
+    for(int i=1;i<=n;i++){
+        scanf("%d",&a[i]);     
+    }
+        int s=0;
+        double r=0,dem=0;
+    for(int i=1;i<=n;i++){
+        if(a[i]>0){
+        s+=a[i];
+        }
+        if(a[i]<0){
+        r+=a[i];
+        dem++;
+        }    
+    }
+    if(dem==0){printf("Mang khong co so am ");}  
+    else{printf("%lf ",r/dem);}
+    if(s==0){printf("Mang khong co so duong");}
+    else{printf("%d",s);}
+    return 0;
+}
+
+
 5.3: Nhập mảng 𝑛 số nguyên bất kỳ từ bàn phím. Sắp xếp dãy số theo thứ tự tăng dần và đưa kết quả ra màn hình (Mỗi phần tử cách nhau một dấu cách).
 Mô tả giá trị đầu vào:
 - Dòng đầu tiên cho biết số phần tử mảng 𝑛.
@@ -43,6 +94,31 @@ Input:
 Output:
 1 2 3 4 5
 
+#include<stdio.h>
+int main() {
+    int n;
+    int arr[1000];
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] > arr[j]) {
+                // Nếu arr[i] > arr[j] thì hoán đổi giá trị của arr[i] và arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+
 5.4: Viết một chương trình nhập một chuỗi S và số nguyên n . Chương trình sẽ cắt chuỗi đó theo số nguyên n.
 Chú ý: Nếu chuỗi đã ngắn hơn n, chương trình không nên thay đổi chuỗi
 Mô tả giá trị đầu vào:
@@ -54,6 +130,26 @@ Ví dụ:
 Input: abcde
 3
 Output: abc 
+
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+ int main(){
+ 	char s[1000];
+	scanf("%s",s);
+    int i;
+	scanf("%d",&i);
+	int l=strlen(s);
+	if(i<=l){
+		while(i<l)
+    {   
+			s[i]=32;
+			++i;
+		} printf("%s",s);
+	}else{printf("%s",s);}
+	return 0;
+}
+
 
 5.5: Viết chương trình đọc hai chuỗi S và T. Đếm số lần mỗi ký tự xuất hiện trong cả hai chuỗi.
 Chú ý:
@@ -72,6 +168,52 @@ Output: abc
 5
 3
 
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char s[100],t[100];
+    char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    int dem[62];
+    
+    for(int i = 0;i<strlen(c);i++){
+    	dem[i] = 0;
+	}
+    scanf("%s", s);
+    scanf("%s", t);
+    //printf("%s\n",s);
+   // printf("%s\n",t); 
+for(int i = 0; i<strlen(c);i++){
+	for(int j = 0;j<strlen(s);j++){
+		if(c[i] == s[j]){
+			dem[i]++;
+		}
+	}
+}
+for(int i = 0; i<strlen(c);i++){
+	for(int j = 0;j<strlen(t);j++){
+		if(c[i] == t[j]){
+			dem[i]++;
+		}
+	}
+}
+
+for(int i = 0;i<strlen(c);i++){
+	if(dem[i] != 0){
+		printf("%c",c[i]);
+	}
+}
+printf("\n");
+for(int i = 0;i<strlen(c);i++){
+	if(dem[i] != 0){
+		printf("%d\n",dem[i]);
+	}
+	
+}
+    return 0;
+}
+
+
 5.6: Lập chương trình thực hiện các công việc sau:
 - Nhập vào từ bàn phím một câu tiêu đề bài báo bất kỳ.
 - Chuẩn hóa xâu đã nhập bằng cách xóa các dấu cách thừa ở đầu, cuối, giữa để đảm bảo chỉ có 1 dấu cách phân tách giữa các từ và chuyển các chữ cái thường thành chữ hoa tương ứng.
@@ -83,6 +225,34 @@ Câu đã chuẩn hóa và độ dài tương ứng được in ra thành 1 dòn
 Ví dụ:
 Input: Quan    an    bi     xu    phat 
 Output: QUAN AN BI XU PHAT:18
+
+#include <stdio.h>
+#include <string.h>
+ int main()
+{
+    char s[1000];
+    fgets(s, 1000, stdin);
+
+    int l=strlen(s),n=l;
+
+     for(int i=0;i<l;i++){
+        if(s[i]==' '&& s[i+1]==' '){
+    	    for(int j=i;j<n;j++){s[j]=s[j+1]; }    
+    	 n=n-1;  
+         i--;  
+         }
+     } 
+    if(s[0]==32){
+        for(int j=0;j<strlen(s);j++){s[j]=s[j+1];}}
+    int c=strlen(s);
+    if(s[c-2]==32 ){ s[c-1]='\0'; s[c-2]='\0' ;}else{s[c-1]='\0';}
+    int y= strlen(s);
+  	for(int j=0;j<y;j++){
+  	    if(s[j]>=97 && s[j]<=122){s[j]=s[j]-32;}}    
+    printf("%s:%d",s,y);    
+    return 0;
+}
+
 
 
 
