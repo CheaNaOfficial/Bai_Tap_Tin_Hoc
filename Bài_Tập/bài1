@@ -1,1 +1,116 @@
+Bài_2.1:  Soạn thảo chương trình cộng hai số thực sau, cố gắng gõ chính xác:
+          Mô tả giá trị đầu vào
+          - Số thực a
+          - Số thực b
+          Mô tả giá trị đầu ra
+          - Kết quả
+..............................................................................
+..............................................................................
+#include<stdio.h>
+int main(){
+    float a,b,tong;
+    scanf("%f",&a);
+    scanf("%f",&b);
+    tong=a+b;
+    printf("%f",tong);
+    return 0;
+}
 
+Bài_2.2:  Soạn thảo chương trình sau, cố gắng gõ chính xác:
+          Mô tả giá trị đầu vào
+          - Số thực a
+          - Số thực b
+          Mô tả giá trị đầu ra
+          - Số lớn hơn
+..............................................................................
+..............................................................................
+        
+#include<stdio.h>
+int main(){
+    float a,b,max;
+    scanf("%f",&a);
+    scanf("%f",&b);
+    max=a;
+    if(max<b)
+    max=b;
+    printf("%6.2f",max);
+    return 0;
+}
+
+Bài_2.3: Chương trình đang có 1 vài lỗi sinh viên cần tìm, sửa các lỗi và chạy lại chương trình.
+         Mô tả giá trị đầu vào
+        - Số thực x
+        - Số thực y
+        Mô tả giá trị đầu ra
+        - Số bé hơn 
+..............................................................................
+..............................................................................
+#include<stdio.h>
+int main(){
+    float x,y,min;
+    scanf("%f",&x);
+    scanf("%f",&y);
+    if(x<y)
+    min = x;
+    else 
+    min =y;
+    printf("%f",min);
+    return 0;
+    
+}
+
+Bài_2.4:  Chương trình đang có 1 vài lỗi sinh viên cần tìm, sửa các lỗi và chạy lại chương trình.
+          Mô tả giá trị đầu vào
+          - Số thực x
+          - Số thực y
+          Mô tả giá trị đầu ra
+          - Số lớn hơn
+..............................................................................
+..............................................................................
+#include<stdio.h>
+int main(){
+    float x,y,max;
+    scanf("%f",&x);
+    scanf("%f",&y);
+    if(x>y)
+    max=x;
+    else
+    max=y;
+    printf("%6.2f",max);
+    return 0;
+}
+Bài_2.5:Chương trình đang có một vài lỗi sinh viên cần tìm, sửa các lỗi và chạy lại chương trình.
+        Mô tả giá trị đầu vào
+        - Số nguyên a
+        - Số nguyên b
+        - Số nguyên c
+        Mô tả giá trị đầu ra
+        - Tổng a b c
+        - Trung bình cộng a b c
+Cách 1: #include<stdio.h>
+..............................................................................
+..............................................................................
+int main(){
+    int a,b,c;
+	int tong;
+    printf("nhap a: ");scanf("%d",&a);
+    printf("nhap b: ");scanf("%d",&b);
+    printf("nhap c: ");scanf("%d",&c);
+    tong=a+b+c;
+    printf("%d\n",tong);
+    printf("%f",tong/3.0);
+}
+Cách 2: #include<stdio.h>
+int main(){
+    float a,b,c;
+    printf("\n nhap 3 so a, b,c: ");
+	scanf("%f %f %f",&a,&b,&c);
+	float maxValue =a;
+	if(b>maxValue){
+		maxValue =b;
+	}
+  	if(c>maxValue){
+  		maxValue = c;
+	  }
+	  printf("so lon nhat :%f", maxValue);
+}
